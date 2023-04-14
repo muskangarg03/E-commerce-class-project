@@ -49,7 +49,7 @@ import orderRouter from './routes/orderRoutes.js';
 dotenv.config();
 
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect('mongodb://127.0.0.1/amazona' || process.env.MONGODB_URI)
   .then(() => {
     console.log('connected to db');
   })

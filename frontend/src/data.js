@@ -48,6 +48,19 @@ const data = {
       numReviews: 10,
       description: 'high quality product',
     },
+    {
+      // _id: '4',
+      name: 'skyline Fit Pant',
+      slug: 'skyline-fit-pant',
+      category: 'Pants',
+      image: '/images/p4.jpg',
+      price: 65,
+      countInStock: 5,
+      brand: 'Puma',
+      rating: 4.5,
+      numReviews: 10,
+      description: 'high quality product',
+    },
   ],
 };
 export default data;

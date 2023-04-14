@@ -3,13 +3,13 @@ import bcrypt from 'bcryptjs';
 const data = {
   users: [
     {
-      name: 'Basir',
+      name: 'Shiva Srivastava',
       email: 'admin@example.com',
       password: bcrypt.hashSync('123456'),
       isAdmin: true,
     },
     {
-      name: 'John',
+      name: 'Muskan',
       email: 'user@example.com',
       password: bcrypt.hashSync('123456'),
       isAdmin: false,
@@ -59,6 +59,19 @@ const data = {
       // _id: '4',
       name: 'Adidas Fit Pant',
       slug: 'adidas-fit-pant',
+      category: 'Pants',
+      image: '/images/p4.jpg',
+      price: 65,
+      countInStock: 5,
+      brand: 'Puma',
+      rating: 4.5,
+      numReviews: 10,
+      description: 'high quality product',
+    },
+    {
+      // _id: '4',
+      name: 'skyline Fit Pant',
+      slug: 'skyline-fit-pant',
       category: 'Pants',
       image: '/images/p4.jpg',
       price: 65,
