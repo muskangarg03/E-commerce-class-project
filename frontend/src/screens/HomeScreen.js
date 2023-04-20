@@ -7,6 +7,7 @@ import Product from '../components/Product';
 import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import Carousel from '../components/Carousel/Carousel';
 // import data from '../data';
 
 const reducer = (state, action) => {
@@ -46,8 +47,11 @@ function HomeScreen() {
   return (
     <div>
       <Helmet>
-        <title>Amazona</title>
+        <title>xNeuron</title>
       </Helmet>
+      <Carousel />
+      {/* <Carousel/> is a XML style code     */}
+
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (

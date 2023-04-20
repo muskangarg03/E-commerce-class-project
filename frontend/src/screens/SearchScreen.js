@@ -36,15 +36,15 @@ const reducer = (state, action) => {
 
 const prices = [
   {
-    name: '$1 to $50',
+    name: '1 to 50',
     value: '1-50',
   },
   {
-    name: '$51 to $200',
+    name: '51 to 200',
     value: '51-200',
   },
   {
-    name: '$201 to $1000',
+    name: '201 to 1000',
     value: '201-1000',
   },
 ];
@@ -125,7 +125,7 @@ export default function SearchScreen() {
     const filterRating = filter.rating || rating;
     const filterPrice = filter.price || price;
     const sortOrder = filter.order || order;
-    return `/search?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
+    return `/search/category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`;
   };
   return (
     <div>
@@ -134,9 +134,9 @@ export default function SearchScreen() {
       </Helmet>
       <Row>
         <Col md={3}>
-          <h3>Department</h3>
+          {/* <h3>Department</h3> */}
           <div>
-            <ul>
+            {/* <ul>
               <li>
                 <Link
                   className={'all' === category ? 'text-bold' : ''}
@@ -155,10 +155,10 @@ export default function SearchScreen() {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div>
-            <h3>Price</h3>
+            {/* <h3>Price</h3>
             <ul>
               <li>
                 <Link
@@ -178,10 +178,10 @@ export default function SearchScreen() {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div>
-            <h3>Avg. Customer Review</h3>
+            {/* <h3>Avg. Customer Review</h3>
             <ul>
               {ratings.map((r) => (
                 <li key={r.name}>
@@ -201,7 +201,7 @@ export default function SearchScreen() {
                   <Rating caption={' & up'} rating={0}></Rating>
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </Col>
         <Col md={9}>
@@ -232,7 +232,7 @@ export default function SearchScreen() {
                     ) : null}
                   </div>
                 </Col>
-                <Col className="text-end">
+                {/* <Col className="text-end">
                   Sort by{' '}
                   <select
                     value={order}
@@ -245,7 +245,7 @@ export default function SearchScreen() {
                     <option value="highest">Price: High to Low</option>
                     <option value="toprated">Avg. Customer Reviews</option>
                   </select>
-                </Col>
+                </Col> */}
               </Row>
               {products.length === 0 && (
                 <MessageBox>No Product Found</MessageBox>
