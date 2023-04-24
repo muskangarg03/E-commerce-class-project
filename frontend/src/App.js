@@ -34,6 +34,7 @@ import Footer from './components/Footer/Footer';
 import OrderListScreen from './screens/OrderListScreen';
 import UserListScreen from './screens/UserListScreen';
 import UserEditScreen from './screens/UserEditScreen';
+import Chat from './components/Chat/Chat';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -81,7 +82,7 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>amazona</Navbar.Brand>
+                <Navbar.Brand>xNeuron</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -255,6 +256,7 @@ function App() {
             </Routes>
           </Container>
         </main>
+        <Chat />
         <Footer>
           {/* <div className="text-center">All rights reserved</div> */}
         </Footer>
