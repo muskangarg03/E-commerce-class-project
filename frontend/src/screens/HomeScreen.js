@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Carousel from '../components/Carousel/Carousel';
-import Chat from '../components/Chat/Chat';
+ 
 // import data from '../data';
 
 const reducer = (state, action) => {

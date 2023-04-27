@@ -82,7 +82,7 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>xNeuron</Navbar.Brand>
+                <Navbar.Brand>xNeuron </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
