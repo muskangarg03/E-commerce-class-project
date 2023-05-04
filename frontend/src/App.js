@@ -117,7 +117,7 @@ function App() {
                     >
                       <LinkContainer to="/profile">
                         <NavDropdown.Item style={{ color: 'black' }}>
-                          User Profile
+                          {/* User Profile */}
                         </NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
@@ -198,14 +198,14 @@ function App() {
               <Route path="/search" element={<SearchScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
-              <Route
+              {/* <Route
                 path="/profile"
                 element={
                   <ProtectedRoute>
                     <ProfileScreen />
                   </ProtectedRoute>
                 }
-              />
+              /> */}
               <Route path="/placeorder" element={<PlaceOrderScreen />} />
               <Route
                 path="/order/:id"

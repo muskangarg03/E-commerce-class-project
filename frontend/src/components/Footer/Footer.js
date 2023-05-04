@@ -18,9 +18,9 @@ const Footer = () => {
           <h2 className="text-black-900 font-bold ">Contact</h2>
 
           <address>
-            5534 Somewhere In. The World 22193-10212
+            GLA xNeuron
             <br />
-            <a className="footer__btn" href="mailto:example@gmail.com">
+            <a className="footer__btn" href="mailto:xNeuron@gmail.com">
               Email Us
             </a>
           </address>
