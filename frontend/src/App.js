@@ -1,3 +1,4 @@
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -66,15 +67,22 @@ function App() {
       <div
         className={
           sidebarIsOpen
-            ? 'd-flex flex-column site-container active-cont'
-            : 'd-flex flex-column site-container'
+            ? 'd-flex flex-column site-container active-cont '
+            : 'd-flex flex-column site-container  ml-[40px] mr-[40px] text-black '
         }
       >
         <ToastContainer position="bottom-center" limit={1} />
-        <header>
-          <Navbar bg="dark" variant="dark" expand="lg">
+        <header className="sticky top-0 z-50">
+          <Navbar
+            className="bg-blue-900 mt-2 shadow-sm rounded-sm "
+            variant="dark"
+            expand="lg"
+          >
             <Container>
               <Button
+                style={{ color: 'black' }}
+                className="border-none  "
+                color="dark"
                 variant="dark"
                 onClick={() => setSidebarIsOpen(!sidebarIsOpen)}
               >
@@ -82,14 +90,18 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>xNeuron </Navbar.Brand>
+                <Navbar.Brand className="text-black pl-3 text-[30px]">
+                  <h1 className="bg-black-200 " style={{ color: 'white' }}>
+                    xNeuron
+                  </h1>
+                </Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <SearchBox />
                 <Nav className="me-auto  w-100  justify-content-end">
                   <Link to="/cart" className="nav-link">
-                    Cart
+                    <ShoppingCartIcon style={{ color: 'black' }} />
                     {cart.cartItems.length > 0 && (
                       <Badge pill bg="danger">
                         {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
@@ -97,15 +109,25 @@ function App() {
                     )}
                   </Link>
                   {userInfo ? (
-                    <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
+                    <NavDropdown
+                      className="text-black mr-[80px] "
+                      color="black"
+                      title={userInfo.name}
+                      id="basic-nav-dropdown"
+                    >
                       <LinkContainer to="/profile">
-                        <NavDropdown.Item>User Profile</NavDropdown.Item>
+                        <NavDropdown.Item style={{ color: 'black' }}>
+                          User Profile
+                        </NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item>Order History</NavDropdown.Item>
+                        <NavDropdown.Item style={{ color: 'black' }}>
+                          Order History
+                        </NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Divider />
                       <Link
+                        style={{ color: 'black' }}
                         className="dropdown-item"
                         to="#signout"
                         onClick={signoutHandler}
@@ -114,7 +136,7 @@ function App() {
                       </Link>
                     </NavDropdown>
                   ) : (
-                    <Link className="nav-link" to="/signin">
+                    <Link style={{ color: 'black' }} to="/signin">
                       Sign In
                     </Link>
                   )}
@@ -124,13 +146,19 @@ function App() {
                         <NavDropdown.Item>Dashboard</NavDropdown.Item>
                       </LinkContainer> */}
                       <LinkContainer to="/admin/products">
-                        <NavDropdown.Item>Products</NavDropdown.Item>
+                        <NavDropdown.Item style={{ color: 'black' }}>
+                          Products
+                        </NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/orders">
-                        <NavDropdown.Item>Orders</NavDropdown.Item>
+                        <NavDropdown.Item style={{ color: 'black' }}>
+                          Orders
+                        </NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/users">
-                        <NavDropdown.Item>Users</NavDropdown.Item>
+                        <NavDropdown.Item style={{ color: 'black' }}>
+                          Users
+                        </NavDropdown.Item>
                       </LinkContainer>
                     </NavDropdown>
                   )}

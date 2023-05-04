@@ -62,15 +62,15 @@ export default function ProfileScreen() {
   };
 
   return (
-    <div className="container small-container">
+    <div className=" mb-11 mt-11 ml-[300px] p-[20px] min-h-auto w-[800px] shadow-md border-2 rounded-md bg-blue-100 justify-center">
       <Helmet>
         <title>User Profile</title>
       </Helmet>
-      <h1 className="my-3">User Profile</h1>
+      <h1 className="my-3 text-[30px] font-bold">User Profile</h1>
       <form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Name</Form.Label>
-          <Form.Control
+          <Form.Control className='border-none'
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -78,7 +78,7 @@ export default function ProfileScreen() {
         </Form.Group>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Email</Form.Label>
-          <Form.Control
+          <Form.Control className='border-none'
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -87,20 +87,20 @@ export default function ProfileScreen() {
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Password</Form.Label>
-          <Form.Control
+          <Form.Control className='border-none'
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Confirm Password</Form.Label>
-          <Form.Control
+          <Form.Control className='border-none'
             type="password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Update</Button>
+          <Button className='border-none' type="submit">Update</Button>
         </div>
       </form>
     </div>

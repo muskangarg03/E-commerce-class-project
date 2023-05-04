@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 import { Store } from '../Store';
 import CheckoutSteps from '../components/CheckoutSteps';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 export default function ShippingAddressScreen() {
   const navigate = useNavigate();
@@ -50,14 +51,14 @@ export default function ShippingAddressScreen() {
     navigate('/payment');
   };
   return (
-    <div>
+    <div className=" mb-11 mt-11 ml-[300px] p-[20px] min-h-auto w-[800px] shadow-md border-2 rounded-md bg-blue-100 justify-center">
       <Helmet>
         <title>Shipping Address</title>
       </Helmet>
 
       <CheckoutSteps step1 step2></CheckoutSteps>
       <div className="container small-container">
-        <h1 className="my-3">Shipping Address</h1>
+        <h1 className="my-3 text-[30px] font-bold"><LocalShippingIcon/>Shipping Address</h1>
         <Form onSubmit={submitHandler}>
           <Form.Group className="mb-3" controlId="fullName">
             <Form.Label>Full Name</Form.Label>
@@ -100,7 +101,7 @@ export default function ShippingAddressScreen() {
             />
           </Form.Group>
           <div className="mb-3">
-            <Button variant="primary" type="submit">
+            <Button className='border-none' variant="primary" type="submit">
               Continue
             </Button>
           </div>

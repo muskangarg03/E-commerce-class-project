@@ -125,7 +125,7 @@ function ProductScreen() {
       <Row>
         <Col md={6}>
           <img
-            className="img-large"
+            className="h-[600px] pl-[60px]"
             src={product.image}
             alt={product.name}
           ></img>
@@ -179,7 +179,7 @@ function ProductScreen() {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button onClick={addToCartHandler} variant="primary">
+                    <Button className='border-none hover:bg-blue-200' onClick={addToCartHandler} variant="primary">
                         Add to Cart
                       </Button>
                     </div>
@@ -240,7 +240,7 @@ function ProductScreen() {
               </FloatingLabel>
 
               <div className="mb-3">
-                <Button disabled={loadingCreateReview} type="submit">
+                <Button className='border-none hover:bg-blue-200' disabled={loadingCreateReview} type="submit">
                   Submit
                 </Button>
                 {loadingCreateReview && <LoadingBox></LoadingBox>}

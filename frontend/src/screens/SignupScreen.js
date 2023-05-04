@@ -49,49 +49,55 @@ export default function SignupScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
-      <Helmet>
+    <Container className=" mb-11 mt-11 min-h-auto w-[800px] shadow-md border-2 rounded-md bg-blue-100 flex flex-row justify-around">
+      <div className='flex flex-col justify-center items-center'>
+      <Helmet >
         <title>Sign Up</title>
       </Helmet>
-      <h1 className="my-3">Sign Up</h1>
+      <h1 className="my-3 text-[30px] font-bold">Sign Up</h1>
       <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control onChange={(e) => setName(e.target.value)} required />
+        <Form.Group className="mb-3 flex flex-row gap-3 justify-between" controlId="name">
+          <Form.Label className='text-[18px] font-medium'>Name</Form.Label>
+          <Form.Control  className='border-none p-2 w-[300px]' onChange={(e) => setName(e.target.value)} required />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
+        <Form.Group className="mb-3 flex flex-row gap-3 justify-between" controlId="email">
+          <Form.Label className='text-[18px] font-medium'>Email</Form.Label>
+          <Form.Control  className='border-none p-2 w-[300px]'
             type="email"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
+        <Form.Group className="mb-3 flex flex-col gap-3 justify-between" controlId="password">
+          <div className='flex justify-between gap-3'>
+          <Form.Label className='text-[18px] font-medium'>Password</Form.Label>
+          <Form.Control  className='border-none p-2 w-[300px]'
             type="password"
             required
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Form.Group className="mb-3" controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control
+          </div>
+          <div className='flex flex-row'>
+          <Form.Group className="mb-3 flex flex-row gap-3 justify-between" controlId="confirmPassword">
+            <Form.Label className='text-[18px] font-medium'>Confirm Password</Form.Label>
+            <Form.Control  className='border-none p-2 w-[300px]'
               type="password"
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
             />
           </Form.Group>
+          </div>
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign Up</Button>
+          <Button className='border-none' type="submit">Sign Up</Button>
         </div>
         <div className="mb-3">
           Already have an account?{' '}
           <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
         </div>
       </Form>
+      </div>
     </Container>
   );
 }
