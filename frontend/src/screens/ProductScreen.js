@@ -125,7 +125,7 @@ function ProductScreen() {
       <Row>
         <Col md={6}>
           <img
-            className="img-large"
+            className="h-[600px] pl-[60px]"
             src={product.image}
             alt={product.name}
           ></img>
@@ -144,7 +144,9 @@ function ProductScreen() {
                 numReviews={product.numReviews}
               ></Rating>
             </ListGroup.Item>
-            <ListGroup.Item>Pirce : ${product.price}</ListGroup.Item>
+            <ListGroup.Item>
+              Pirce : &#x20B9;&nbsp;{product.price}
+            </ListGroup.Item>
             <ListGroup.Item>
               Description:
               <p>{product.description}</p>
@@ -158,7 +160,7 @@ function ProductScreen() {
                 <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
-                    <Col>${product.price}</Col>
+                    <Col>&#x20B9;&nbsp;{product.price}</Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
@@ -177,7 +179,7 @@ function ProductScreen() {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button onClick={addToCartHandler} variant="primary">
+                    <Button className='border-none hover:bg-blue-200' onClick={addToCartHandler} variant="primary">
                         Add to Cart
                       </Button>
                     </div>
@@ -238,7 +240,7 @@ function ProductScreen() {
               </FloatingLabel>
 
               <div className="mb-3">
-                <Button disabled={loadingCreateReview} type="submit">
+                <Button className='border-none hover:bg-blue-200' disabled={loadingCreateReview} type="submit">
                   Submit
                 </Button>
                 {loadingCreateReview && <LoadingBox></LoadingBox>}

@@ -9,7 +9,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
+import AddIcon from '@mui/icons-material/Add';
 export default function CartScreen() {
   const navigate = useNavigate();
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -41,7 +43,7 @@ export default function CartScreen() {
       <Helmet>
         <title>Shopping Cart</title>
       </Helmet>
-      <h1>Shopping Cart</h1>
+      <h1 className="mb-2 font-semibold text-[28px] text-gray-700">Shopping Cart <ShoppingBagIcon color='primary'/></h1>
       <Row>
         <Col md={8}>
           {cartItems.length === 0 ? (
@@ -69,7 +71,7 @@ export default function CartScreen() {
                         variant="light"
                         disabled={item.quantity === 1}
                       >
-                        <i className="fas fa-minus-circle"></i>
+                        <RemoveOutlinedIcon/>
                       </Button>{' '}
                       <span>{item.quantity}</span>{' '}
                       <Button
@@ -79,7 +81,7 @@ export default function CartScreen() {
                         }
                         disabled={item.quantity === item.countInStock}
                       >
-                        <i className="fas fa-plus-circle"></i>
+                       <AddIcon/>
                       </Button>
                     </Col>
                     <Col md={3}>&#x20B9;&nbsp;{item.price}</Col>
@@ -112,8 +114,8 @@ export default function CartScreen() {
                   <div className="d-grid">
                     <Button
                       type="button"
-                      variant="primary"
                       onClick={checkoutHandler}
+                      className='border-none bg-blue-200'
                       disabled={cartItems.length === 0}
                     >
                       Proceed to Checkout

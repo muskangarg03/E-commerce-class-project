@@ -7,79 +7,98 @@ import './Footer.css';
 // import TwitterIcon from '@mui/icons-material/Twitter';
 // import TelegramIcon from '@mui/icons-material/Telegram';
 // import PinterestIcon from '@mui/icons-material/Pinterest';
-
+const date = new Date().getFullYear();
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer__container">
-        <div className="footer__items__container">
-          <div className="footer__help__container">
-            <div className="footer__help__header">
-              <h1>Help</h1>
-            </div>
-            <ul className="fotter__help__links">
-              <li className="help__link">
-                <a href="/"> Shipping</a>
-              </li>
-              <li className="help__link">
-                <a href="/">Refund</a>
-              </li>
-              <li className="help__link">
-                <a href="/">FAQ</a>
-              </li>
-              <li className="help__link">
-                <a href="/">Accessiblity</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer__contact__container">
-            <div className="footer__contact__header">
-              <h1>Contact Us</h1>
-            </div>
-            <ul className="footer__contacts">
-              {/* <li className="footer__contact">
-                <LocalPhoneIcon /> <span>+91 8791509356</span>
-              </li>
-              <li className="footer__contact">
-                <EmailIcon /> <span>shop@xneuron.com</span>
-              </li>
-              <li className="footer__contact">
-                <LocationOnIcon /> <span>Gla University, Mathura</span>
-              </li> */}
-            </ul>
-          </div>
-          <div className="footer__social__link__container">
-            <div className="footer__social__link__header">
-              <h1>Stay Connected</h1>
-            </div>
-            <ul className="footer__social__links">
-              {/* <li className="social__link">
-                <TwitterIcon />
-              </li>
-              <li className="social__link">
-                <InstagramIcon />
-              </li>
-              <li className="social__link">
-                <YouTubeIcon />
-              </li>
-              <li className="social__link">
-                <TelegramIcon />
-              </li>
-              <li className="social__link">
-                <PinterestIcon />
-              </li> */}
-            </ul>
-          </div>
+    <>
+      <footer className="footer bg-blue-900 rounded">
+        <div className="footer__addr">
+          <h1 className="footer__logo text-black-900 font-bold">Something</h1>
+
+          <h2 className="text-black-900 font-bold ">Contact</h2>
+
+          <address>
+            GLA xNeuron
+            <br />
+            <a className="footer__btn" href="mailto:xNeuron@gmail.com">
+              Email Us
+            </a>
+          </address>
         </div>
-        <div className="fotter__copyright__container">
-          <ul className="nav">
-            <li className="footer__copyright">©2022 XNeuron Ltd. |</li>
-            <li className="footer__terms__condition"> | Terms & Condition |</li>
-            <li className="footer__privacy__policy">| Privacy Policy</li>
-          </ul>
+
+        <ul className="footer__nav">
+          <li className="nav__item">
+            <h2 className="nav__title text-black-900 font-bold">Media</h2>
+
+            <ul className="nav__ul">
+              <li>
+                <a href="#">Online</a>
+              </li>
+
+              <li>
+                <a href="#">Print</a>
+              </li>
+
+              <li>
+                <a href="#">Alternative Ads</a>
+              </li>
+            </ul>
+          </li>
+
+          <li className="nav__item nav__item--extra">
+            <h2 className="nav__title text-black-900 font-bold">Technology</h2>
+
+            <ul className="nav__ul nav__ul--extra">
+              <li>
+                <a href="#">Hardware Design</a>
+              </li>
+
+              <li>
+                <a href="#">Software Design</a>
+              </li>
+
+              <li>
+                <a href="#">Digital Signage</a>
+              </li>
+
+              <li>
+                <a href="#">Automation</a>
+              </li>
+
+              <li>
+                <a href="#">Artificial Intelligence</a>
+              </li>
+
+              <li>
+                <a href="#">IoT</a>
+              </li>
+            </ul>
+          </li>
+
+          <li className="nav__item">
+            <h2 className="nav__title text-black-900 font-bold">Legal</h2>
+
+            <ul className="nav__ul">
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+
+              <li>
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div className="legal">
+          <p>&copy; {date} Something. All rights reserved.</p>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

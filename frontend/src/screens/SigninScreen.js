@@ -34,7 +34,10 @@
 //     </Container>
 //   );
 // }
-
+import './Screens.css'
+import EmailIcon from '@mui/icons-material/Email';
+import KeyIcon from '@mui/icons-material/Key';
+import web from './images/moon.png'
 import Axios from 'axios';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
@@ -79,36 +82,43 @@ export default function SigninScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
+    <Container className="small-container mb-11 mt-11 h-[400px] w-[700px] shadow-md border-2 rounded-md bg-blue-100 flex flex-row justify-around">
+      <div>
+        <img className='h-[350px] bgimg' src={web} alt='image_sign' />
+      </div>
+      <div >
       <Helmet>
         <title>Sign In</title>
       </Helmet>
-      <h1 className="my-3">Sign In</h1>
+      <h1 className="my-3 text-[30px] font-bold">Sign In</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
+          <Form.Label>Email <EmailIcon/></Form.Label>
           <Form.Control
+          className='border-none p-2'
             type="email"
             required
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
+          <Form.Label>Password <KeyIcon/></Form.Label>
           <Form.Control
+          className='border-none p-2'
             type="password"
             required
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
         <div className="mb-3">
-          <Button type="submit">Sign In</Button>
+          <Button type="submit" className='border-none'>Sign In</Button>
         </div>
-        <div className="mb-3">
+        <div className="mb-3 flex flex-row">
           New customer?{' '}
-          <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+          <Link to={`/signup?redirect=${redirect}`}><p className='pl-1 absolute hover:font-light' >Create your account</p></Link>
         </div>
       </Form>
+      </div>
     </Container>
   );
 }
